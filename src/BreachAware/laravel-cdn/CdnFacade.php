@@ -108,7 +108,7 @@ class CdnFacade implements CdnFacadeInterface
     {
         // if the package is surpassed, then return the same $path
         // to load the asset from the localhost
-        if (isset($this->configurations['bypass']) && $this->configurations['bypass']) {
+        if (isset($this->configurations['enabled']) && !$this->configurations['enabled']) {
             return $path;
         }
 
